@@ -6,10 +6,9 @@
 - PyQt5를 사용하여 joystick 위젯을 구현한 것으로 사용자가 마우스로 조이스틱을 조작하여 X,Y 축의 좌표를 전송해줍니다.
 - 조이스틱의 움직임을 원활하게 하기 위해 GUI를 구성하는 역할을 하였고 마우스의 입력을 받아 드래그 및 클릭 이벤트를 처리할 수 있도록 했습니다.<br>
 - 조이스틱의 움직임 좌표는 joystick.py코드에서 실행하여 쉘에서 확인가능합니다.
-----------------------------------------------
+- 
 ## joystick.py
 ![KakaoTalk_20240913_122123160](https://github.com/user-attachments/assets/90215bb3-9bff-4866-94bc-bdbd614ec11c)
-
 
 - 위젯의 위치와 배경 색을 지정하고 이 위젯에 레이아웃을 설정해 조이스틱, 비디오 라벨, 속도 슬라이더를 배치합니다.
 - MyJoystick 클래스를 사용해 Joystick을 생성하고, cbJoyPos 콜백 함수를 통해 Joystick의 위치를 출력합니다.
@@ -21,4 +20,36 @@
 
 ## myjoystickapp.py
 
--myjoystickapp은 joystick파일과 유사하며 
+- myjoystickapp은 조이스틱,슬라이더,비디오 라벨 등 여러 UI 요소를 포함한 애플리케이션입니다.
+- 애플리케이션의 실행과 전체적인 UI 구성을 관리하고 조이스틱과 다른 위젯을 연동하여 하나의 통합된 프로그램을 구성합니다.
+-joystick과 myjoystickapp 파일의 형태가 비슷해보이지만 MyJoystick은 Joystick 자체의 기능을 정의한 작은 단위의 클래스이고, MyJoystickApp은 Joystick과 다른 요소들을 포함한 전체 프로그램을 구성하는 클래스입니다.
+
+## joystick_pos.py
+
+![KakaoTalk_20240913_155425257](https://github.com/user-attachments/assets/3cd0a921-20c0-497b-8be3-48c6f41bb526)
+
+- joystick_pos은  위의 myjoystickapp을 동작시키는 역할을 합니다.
+- ```cbJoyPos(joystickPosition, app)``` 함수는 조이스틱의 현재 위치 좌표와 속도 정보를 출력하는 콜백입니다.
+
+## joystick_dir.py
+
+![KakaoTalk_20240913_170249743](https://github.com/user-attachments/assets/0f04895f-8bd3-4d39-bbdb-054d6969f0b6)
+
+
+- joystick_dir은 위에 방식과 유사하지만 좌표를 나누어 방향을 출력하도록 하였습니다.
+- 방향으로 바꾸어 출력하여 움직임에 따른 구분이 쉬워졌으며 데이터를 쌓을때 편리성을 높혔습니다.
+
+------------------------------------------------------------------------------------------
+
+## MyJoystickCamApp.py
+
+- MyJoystickCamApp는 MyJoystickApp을 확장하여, 자율주행 RC 카의 실시간 비디오 스트리밍과 프레임 속도를 처리하는 기능을 추가한 애플리케이션입니다.
+- 이 클래스는 OpenCV를 사용하여 비디오 스트림을 받아와 PyQt5 인터페이스에 출력하며, 프레임 속도를 실시간으로 계산해 출력합니다.
+- 데이터를 쌓기 위해 영상을 스트리밍 받아오는 것이 중요하며 영상을 잘 출력되야 데이터를 쌓을때 변수를 줄일 수 있습니다.
+
+## video_joystick.py
+
+![화면 캡처 2024-09-13 180243](https://github.com/user-attachments/assets/97dfffa6-a14f-49be-88c8-4d0727e8c2d8)
+
+- video_joystick은 MyJoystickCamApp를 기반으로 조이스틱을 이용한 자동차 제어와 실시간 비디오 스트리밍을 결합한 프로그램입니다.
+- 조이스틱을 이용하여 RC카의 방향을 제어하며 실시간 비디오 피드를 제공합니다.
