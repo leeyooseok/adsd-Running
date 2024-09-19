@@ -115,6 +115,10 @@ Joystick의 입력을 받아 RC 카와 같은 장치를 제어하고, 동시에 
 
 ## _04_cnn_training_4.py
 
+![55](https://github.com/user-attachments/assets/e730a793-d8c7-488c-9fb7-c8af8f6cf0b9)
+![11](https://github.com/user-attachments/assets/8b1d8e04-7d0c-4f8d-b584-2c053b94979e)
+
+
 - _04_cnn_training_4는 딥러닝 CNN 모델을 정의하고 학습시키는 전체적인 과정을 설명하는 코드입니다. CNN을 활용해 이미지 데이터를 처리하며, 학습 과정에서 손실 함수를 모니터링하고, 최종적으로 모델을 저장하는 과정을 포함하고 있습니다.
 - 컨볼루션 신경망(CNN) 모델을 tf.keras.Sequential로 구성합니다. 이 CNN 모델은 이미지 데이터를 처리하고 분류하는 데 사용되고 모델의 각 층은 다음과 같은 역할을 합니다.
   - **Conv2D 레이어**: 2D 컨볼루션 필터를 사용해 이미지의 특징을 추출합니다. 처음에는 24개의 필터를 사용하고, 점점 더 많은 필터(32, 64)로 이미지를 처리하여 더 깊은 특징을 학습합니다.
