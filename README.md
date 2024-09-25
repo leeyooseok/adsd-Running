@@ -2,7 +2,7 @@
 
 <div align="center">
   
-[![Video Title](https://img.youtube.com/vi/x32PiAAVnLo?si=MF94FQfXkeBA2CIh)]([https://youtube.com/shorts/yvNJ9mNiGHU](https://youtube.com/shorts/x32PiAAVnLo?si=MF94FQfXkeBA2CIh))
+[![Video Title](https://img.youtube.com/vi/x32PiAAVnLo)](https://www.youtube.com/shorts/x32PiAAVnLo))
 
 
 ------------------------------------------------------------------
