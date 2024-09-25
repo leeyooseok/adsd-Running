@@ -1,7 +1,9 @@
 # 자율주행 데이터 학습&주행
 
+<div align="center">
 [![Video Title](https://img.youtube.com/vi/AlVvSRTxmKs/0.jpg)]([https://www.youtube.com/watch?v=AlVvSRTxmKs](https://youtube.com/shorts/yvNJ9mNiGHU))
-
+</div>
+<br>
 ------------------------------------------------------------------
 ## myjoystick.py
 
