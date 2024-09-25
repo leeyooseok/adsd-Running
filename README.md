@@ -1,11 +1,27 @@
 <div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=350&&section=header&text=자율주행 학습&주행%20AIoT%20project&fontSize=70">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=350&&section=header&text=Autonomous%20Driving&fontSize=70">
 </div>
+<div align="center">
+<img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+</div>
+<br>
+
 
 <div align="center">
   
-[![Video Title](https://img.youtube.com/vi/x32PiAAVnLo/0.jpg)](https://www.youtube.com/shorts/x32PiAAVnLo))
+[![Video Title](https://img.youtube.com/vi/x32PiAAVnLo/0.jpg)](https://www.youtube.com/shorts/x32PiAAVnLo))<br>
+*이미지 클릭시 유튜브 동영상으로 이동*
+</div>
 
+
+
+## 프로젝트 개요 💡
+이 프로젝트는 RC카를 기반으로 한 자율주행 시스템을 개발하는 것으로, 주행 데이터를 학습하고 이를 이용해 자동차가 자율적으로 경로를 따라갈 수 있도록 합니다.<br>
+PyQt5를 사용하여 조이스틱 인터페이스를 구현하였으며, 사용자는 마우스를 이용해 자동차의 방향을 제어할 수 있습니다.<br> 
+
+조이스틱과 카메라 스트리밍을 결합하여, RC카의 실시간 주행 상태를 모니터링하고 데이터를 수집합니다. 수집된 데이터는 CNN(Convolutional Neural Network) 모델을 통해 학습되며, 이를 기반으로 RC카는 명령 없이도 경로를 인식하고 주행합니다.<br> 
+
+OpenCV를 사용한 비디오 스트리밍과 PyQt5를 활용한 직관적인 UI가 결합된 이 프로젝트는, 자율주행 기술의 실제 구현 과정에서 사용되는 데이터 수집, 전처리, 모델 학습 및 실시간 적용의 전 과정을 다룹니다.<br> 
 
 ------------------------------------------------------------------
 ## myjoystick.py
@@ -13,7 +29,6 @@
 - PyQt5를 사용하여 joystick 위젯을 구현한 것으로 사용자가 마우스로 조이스틱을 조작하여 X,Y 축의 좌표를 전송해줍니다.
 - 조이스틱의 움직임을 원활하게 하기 위해 GUI를 구성하는 역할을 하였고 마우스의 입력을 받아 드래그 및 클릭 이벤트를 처리할 수 있도록 했습니다.<br>
 - 조이스틱의 움직임 좌표는 joystick.py코드에서 실행하여 쉘에서 확인가능합니다.
-- 
 ## joystick.py
 ![KakaoTalk_20240913_122123160](https://github.com/user-attachments/assets/90215bb3-9bff-4866-94bc-bdbd614ec11c)
 
@@ -125,9 +140,9 @@ Joystick의 입력을 받아 RC 카와 같은 장치를 제어하고, 동시에 
 ![55](https://github.com/user-attachments/assets/e730a793-d8c7-488c-9fb7-c8af8f6cf0b9)
 ![11](https://github.com/user-attachments/assets/8b1d8e04-7d0c-4f8d-b584-2c053b94979e)
 
-- 모델이 총 50번의 학습을 하였으며 모델의 최종 훈련데이터 정확도(accuracy)는 Epoch 50: 98.18% 입니다.
+- 모델이 총 50번의 학습을 하였으며 모델의 최종 훈련데이터 정확도(accuracy)는 **Epoch 50: 98.18%** 입니다.
 - val_loss는 검증 데이터에서의 손실값을 의미합니다. 모델의 예측이 실제 라벨과 얼마나 다른지를 나타내며 낮을수록 좋습니다. 여기서 최종 손실값은 Epoch 50: 0.2462입니다.
-- val_accuracy는 검증 데이터에 대한 정확도를 나타내며 학습 도중 모델의 일반화 성능을 평가할 수 있습니다. Epoch 50: 95.98%
+- val_accuracy는 검증 데이터에 대한 정확도를 나타내며 학습 도중 모델의 일반화 성능을 평가할 수 있습니다.**Epoch 50: 95.98%**
 - 결과는 모델이 훈련 데이터뿐만 아니라 검증 데이터에서도 일반화가 잘 되고 있다는 것을 의미하며, 검증 정확도가 95% 이상으로 매우 우수한 성능을 보여줍니다.
 
 - _04_cnn_training_4는 딥러닝 CNN 모델을 정의하고 학습시키는 전체적인 과정을 설명하는 코드입니다. CNN을 활용해 이미지 데이터를 처리하며, 학습 과정에서 손실 함수를 모니터링하고, 최종적으로 모델을 저장하는 과정을 포함하고 있습니다.
