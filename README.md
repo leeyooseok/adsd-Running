@@ -1,4 +1,6 @@
-# 자율주행 데이터 학습&주행
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=350&&section=header&text=자율주행 학습&주행%20AIoT%20project&fontSize=70">
+</div>
 
 <div align="center">
   
