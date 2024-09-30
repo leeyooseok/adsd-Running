@@ -9,7 +9,8 @@
 
 <div align="center">
   
-[![Video Title](https://img.youtube.com/vi/x32PiAAVnLo/0.jpg)](https://www.youtube.com/shorts/x32PiAAVnLo))<br>
+[![Video Title](https://img.youtube.com/vi/SmFYiiZQVbI/0.jpg)](https://www.youtube.com/shorts/SmFYiiZQVbI))<br>
+
 *이미지 클릭시 유튜브 동영상으로 이동*
 </div>
 
